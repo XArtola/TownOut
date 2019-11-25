@@ -1,0 +1,144 @@
+/*
+
+- Utilización de una plantilla maestra de diseño con bootstrap u otro Framework CSS.
+- Inserción de cabecera con logo y menú.
+- Inserción de barra de navegación con presentación del servicio que ofrece vuestro proyecto.
+- Formulario de contacto (nombre, correoElectrónico, mensaje).
+- Inserción de pie con enlaces a redes sociales.
+
+*/
+
+body{
+
+	background-color: #293A80;
+/*	background-image: url(../img/banner.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 100vh;
+	*/
+
+}
+
+.bg-darkblue{
+
+	background-color: #010038;
+}
+
+#logo{
+
+	display: block;
+}
+
+#tituloPrincipal{
+
+	font-weight: bold;
+	/*color: #F39422;*/
+	color:#537EC5;
+	padding: 2%;
+
+}
+
+#movil{
+
+	size: 30% 30%;
+	margin: 2%;
+	margin-bottom: 0%;
+
+}
+
+.card{
+
+border: none !important;
+
+}
+
+.formulario{
+/*
+background-color: #537EC5;*/
+
+background-color:#293A80;
+}
+
+textarea{
+
+	width: 100%;
+
+}
+
+li{
+
+	list-style: none;
+
+}
+
+#tituloForm{
+
+
+	
+}
+
+.card{
+
+	background-color: white;
+	border: 1px solid #537EC5;
+
+}
+
+.cardImg{
+
+	width: 20%;
+}
+
+.card-deck{
+
+	background-color: white;
+
+}
+
+#tituloCard{
+
+	width: 100%;
+	text-align: center;
+	padding: 5%;
+	font-weight: bold;
+	color: black;
+	/*color:#010038;*/
+
+}
+
+#usuario{
+
+	background-color: #F39422;
+	padding-top: 10vh;
+
+}
+
+.tituloJugador{
+
+	color: #802200;
+	font-weight: bold;
+	padding-bottom: 5vh;
+
+}
+
+#guia{
+
+	background-color:#537EC5;
+	padding-top: 10vh;
+
+}
+
+.tituloGuia{
+
+	color: #293A80;
+
+	font-weight: bold;
+	padding-bottom: 5vh;
+	
+}
+
+label{
+
+	color: white;
+
+}
