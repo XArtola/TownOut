@@ -8,168 +8,112 @@
 
 */
 
-body{
-
+body {
 	background-color: #293A80;
-/*	background-image: url(../img/banner.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	width: 100vh;
-	*/
 	max-width: 100vw;
 }
 
-.bg-darkblue{
-
+.bg-darkblue {
 	background-color: #010038;
 }
 
-#logo{
-
+#logo {
 	display: block;
 }
 
-#tituloPrincipal{
-
+#tituloPrincipal {
 	font-weight: bold;
 	/*color: #F39422;*/
-	color:#537EC5;
+	color: #537EC5;
 	padding: 2%;
-
 }
 
-#movil{
-
+#movil {
 	size: 30% 30%;
 	margin: 2%;
 	margin-bottom: 0%;
-
 }
 
-.card{
-
+.card {
 	border: none !important;
-
 }
 
-.formulario{
-/*
-background-color: #537EC5;*/
-
-background-color:#293A80;
+.formulario {
+	background-color: #293A80;
 }
 
-textarea{
-
+textarea {
 	width: 100%;
-
 }
 
-li{
-
+li {
 	list-style: none;
-
 }
 
-#tituloForm{
-
-
-	
-}
-
-.card{
-
+.card {
 	background-color: white;
 	border: 1px solid #537EC5;
-
 }
 
-.cardImg{
-
+.cardImg {
 	width: 20%;
 }
 
-.minAlto{
-
+.minAlto {
 	min-height: 100vh !important;
-
 }
 
-.card-deck{
-
+.card-deck {
 	background-color: white;
 	min-height: 100vh;
-
 }
 
-#tituloCard{
-
+#tituloCard {
 	width: 100%;
 	text-align: center;
 	padding: 5%;
 	font-weight: bold;
 	color: black;
 	/*color:#010038;*/
-
 }
 
-#usuario{
-
+#usuario {
 	background-color: #F39422;
 	padding-top: 10vh;
-
 }
 
-.tituloJugador{
-
+.tituloJugador {
 	color: #802200;
 	font-weight: bold;
 	padding-bottom: 5vh;
-
 }
 
-#guia{
-
-	background-color:#537EC5;
+#guia {
+	background-color: #537EC5;
 	padding-top: 10vh;
-
 }
 
-.tituloGuia{
-
+.tituloGuia {
 	color: #293A80;
-
 	font-weight: bold;
 	padding-bottom: 5vh;
-	
 }
 
-label{
-
+label {
 	color: white;
-
 }
 
-footer > div >div > a >img{
-
+footer>div>div>a>img {
 	width: 25%;
 	height: 25%;
 }
-@media (max-width: 700px){
 
-	footer > div >div > a >img{
-
+@media (max-width: 700px) {
+	footer>div>div>a>img {
 		width: 50% !important;
 		height: 50% !important;
 	}
-
-	body{
-
-		font-size: 25px;
-
+	body {
+		font-size: 14px;
 	}
-
-
 }
-
-/*https://startbootstrap.com/snippets/navbar-logo/*/

@@ -62,7 +62,7 @@
     </div>
 
     <div class="card-deck p-4">
-        <h1 id="tituloCard" class="display-4">La forma más facil de conocer nuevos lugares</h1>
+        <h1 id="tituloCard" class="display-4">La forma más fácil de conocer nuevos lugares</h1>
         <div class="card col-md-6 col-sm-12">
             <img src="{{asset('assets/img/brujula3.png')}}" class="card-img-top cardImg align-self-start mt-2 pl-4" alt="...">
             <div class="card-body">
@@ -74,7 +74,7 @@
             <img src="{{asset('assets/img/interrogacion.svg')}}" class="card-img-top cardImg align-self-start mt-2 pl-4" alt="...">
             <div class="card-body">
                 <h5 class="card-title font-weight-bold text-uppercase">Escoge una experiencia</h5>
-                <p class="card-text">Escoge la experiencia que quieras vivir del la selección. Usuarios como guias turísticos profesionales pueden crearlas.</p>
+                <p class="card-text">Escoge la experiencia que quieras vivir del la selección. Usuarios como guías turísticos profesionales pueden crearlas.</p>
             </div>
         </div>
         <div class="card col-md-6 col-sm-12">
@@ -94,10 +94,10 @@
                     <img class="col-6 pt-2" src="{{asset('assets/img/hiking.svg')}}">
                     <div class="col-6 pt-4">
                         <p class="text-light font-weight-bold">
-                            Participa en los mejores circuitos diseñados por guias turísticos expertos en la zona.
+                            Participa en los mejores circuitos diseñados por guías turísticos expertos en la zona.
                         </p>
                         <p class="text-light font-weight-bold">
-                            Resuelve enigmas y acertijos junto con tu y sed los primeros
+                            Resuelve enigmas y acertijos junto con tus amigos y sed los primeros
                         </p>
                         <p class="text-light font-weight-bold">
                             Descubre la ciudad como nunca antes
@@ -113,10 +113,10 @@
 
                     <div class="col-6 pt-4">
                         <p class="text-light font-weight-bold">
-                            Utiliza la herramienta de creación de esxperiencias para crear circuitos a medida con recorridos y pruebas personalizadas de forma facil y rápida
+                            Utiliza la herramienta de creación de experiencias para crear circuitos a medida con recorridos y pruebas personalizadas de forma fácil y rápida
                         </p>
                         <p class="text-light font-weight-bold">
-                            Comparte tus creaciónes con la comunidad
+                            Comparte tus creaciones con la comunidad
                         </p>
                         <p class="text-light font-weight-bold">
 
@@ -128,11 +128,11 @@
         </div>
     </div>
     <div class="container-fluid formulario minAlto mb-4">
-        <h1 class="display-4 mx-auto text-center" id="tituloPrincipal">Comienza ahora mismo, ¡¡contáctanos!!</h1>
+        <h1 class="display-4 mx-auto text-center" id="tituloPrincipal">Comienza ya, ¡¡contáctanos!!</h1>
         <form class="col-lg-6 mx-auto" method="post" action="{{route('suggestion.store')}}">
             @csrf
             <div class="form-group">
-                <label>Nombre</label>
+                <label>Nombre:</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Ej: Carlos" value="{{old('name')}}">
                 @if($errors->has('name'))
                 <span class="font-weight-bold text-danger">{{$errors->first('name')}}</span>
@@ -168,7 +168,7 @@
     <footer class="bg-darkblue">
         <div class="container-fluid">
             <div class="row">
-                <h4 class="col-6 text-light font-weight-bold py-4 pl-4">Xabier Artola Zableta @2019</h4>
+                <h4 class="col-6 text-light font-weight-bold py-4 pl-4">Xabier Artola Zabaleta @2019</h4>
                 <a class="col-2 text-center py-4" href="https://www.facebook.com/"><img class="py-auto img-fluid" src="{{asset('assets/img/facebook.svg')}}"></a>
                 <a class="col-2 text-center py-4" href="https://twitter.com/"><img class="img-fluid" src="{{asset('assets/img/twitter.svg')}}"></a>
                 <a class="col-2 text-center py-4" href="https://www.instagram.com/?hl=es"><img class="img-fluid" src="{{asset('assets/img/instagram.svg')}}"></a>
