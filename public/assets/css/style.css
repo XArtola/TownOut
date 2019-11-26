@@ -16,7 +16,7 @@ body{
 	background-size: 100% 100%;
 	width: 100vh;
 	*/
-
+	max-width: 100vw;
 }
 
 .bg-darkblue{
@@ -48,7 +48,7 @@ body{
 
 .card{
 
-border: none !important;
+	border: none !important;
 
 }
 
@@ -89,9 +89,16 @@ li{
 	width: 20%;
 }
 
+.minAlto{
+
+	min-height: 100vh !important;
+
+}
+
 .card-deck{
 
 	background-color: white;
+	min-height: 100vh;
 
 }
 
@@ -142,3 +149,27 @@ label{
 	color: white;
 
 }
+
+footer > div >div > a >img{
+
+	width: 25%;
+	height: 25%;
+}
+@media (max-width: 700px){
+
+	footer > div >div > a >img{
+
+		width: 50% !important;
+		height: 50% !important;
+	}
+
+	body{
+
+		font-size: 25px;
+
+	}
+
+
+}
+
+/*https://startbootstrap.com/snippets/navbar-logo/*/

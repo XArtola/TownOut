@@ -25,10 +25,10 @@ class SuggestionRequest extends FormRequest
     {
         return [
 
-            'name' => 'required|regex:/^[A-ZñàèìòùÁÉÍÓÚ\s]$/i',
-            'surname' => 'required|regex:/^[A-ZñàèìòùÁÉÍÓÚ\s]$/i',
+            'name' => 'required|regex:/^[A-Za-zñàèìòùÁÉÍÓÚ\s]+$/',
+            'surname' => 'required|regex:/^[A-ZñàèìòùÁÉÍÓÚ\s]+$/i',
             'email' => 'required|email',
-            'message' =>'required'
+            'message' =>'required|regex:/^[A-Z0-9,.ñàèìòùÁÉÍÓÚ\s]+$/i'
         ];
     }
 }

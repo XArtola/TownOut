@@ -13,6 +13,7 @@
         <script type="text/javascript" src="{{asset('assets/lib/jquery-3.4.1.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('assets/lib/popper.min.js')}}"></script>
         <script type="text/javascript" src="{{asset('assets/lib/bootstrap.min.js')}}"></script>
+        <script type="text/javascript" src="{{asset('assets/lib/bootstrap.bundle.js')}}"></script>
     </head>
 
 <body>
@@ -51,49 +52,45 @@
         <div class="row">
             <section class="col-lg-6">
                 <h1 id="tituloPrincipal" class="display-4 py-5 my-5">Una nueva forma de descubrir el mundo</h1>
-                <p class="text-light px-4 lead font-weight-bold" id="textoPrinciapal">Con TownOut el turismo pasa a un nuevo nivel. Explora los rincones más emblemáticos de todo el mundo mientras superas acertijos</p>
+                <p class="text-light px-4 lead font-weight-bold" id="textoPrinciapal">Con TownOut el turismo pasa a un nuevo nivel. Explora los rincones más emblemáticos de todo el mundo mientras superas acertijos y pruebas</p>
             </section>
             <aside class="col-lg-6">
                 <img id="movil" src="{{asset('assets/img/Mobile-PNG3.png')}}">
-                
             </aside>
 
         </div>
     </div>
 
-
-    <div class="card-deck p-4 vh-100">
+    <div class="card-deck p-4">
         <h1 id="tituloCard" class="display-4">La forma más facil de conocer nuevos lugares</h1>
-        <div class="card col-sm-12">
-        
+        <div class="card col-md-6 col-sm-12">
             <img src="{{asset('assets/img/brujula3.png')}}" class="card-img-top cardImg align-self-start mt-2 pl-4" alt="...">
             <div class="card-body">
                 <h5 class="card-title font-weight-bold text-uppercase">Inicia TownOut</h5>
                 <p class="card-text">Accede a la página web desde cualquier dispositivo con conexión a internet</p>
             </div>
         </div>
-        <div class="card">
-        
+        <div class="card col-md-6 col-sm-12">
             <img src="{{asset('assets/img/interrogacion.svg')}}" class="card-img-top cardImg align-self-start mt-2 pl-4" alt="...">
             <div class="card-body">
                 <h5 class="card-title font-weight-bold text-uppercase">Escoge una experiencia</h5>
-                <p class="card-text">Escoge la experiencia que quieras vivir.</p>
+                <p class="card-text">Escoge la experiencia que quieras vivir del la selección. Usuarios como guias turísticos profesionales pueden crearlas.</p>
             </div>
         </div>
-        <div class="card">
+        <div class="card col-md-6 col-sm-12">
+
             <img src="{{asset('assets/img/pointer.png')}}" class="card-img-top cardImg align-self-start mt-2 pl-4" alt="...">
             <div class="card-body">
                 <h5 class="card-title font-weight-bold text-uppercase">Empieza a explorar</h5>
-                <p class="card-text">Sigue las pistas, resuelve los acertijos y des </p>
+                <p class="card-text">Sigue las pistas, resuelve los acertijos y supera el reto</p>
             </div>
         </div>
     </div>
     <div class="container-fluid">
-        <div class="row vh-100">
+        <div class="row minAlto">
             <div class="col-md-6 col-sm-12" id="usuario">
                 <h2 class="display-4 tituloJugador pl-2 pt-2">Quiero participar en una experiencia</h2>
                 <div class="row">
-                
                     <img class="col-6 pt-2" src="{{asset('assets/img/hiking.svg')}}">
                     <div class="col-6 pt-4">
                         <p class="text-light font-weight-bold">
@@ -112,18 +109,17 @@
                 <h2 class="display-4 tituloGuia pl-2 pt-2">Quiero crear nuevas experiencias</h2>
 
                 <div class="row">
-                
                     <img class="col-6" src="{{asset('assets/img/graphic-designer2.svg')}}">
 
                     <div class="col-6 pt-4">
                         <p class="text-light font-weight-bold">
-                            Utiliza la herramienta de creación de esxperiencias para crear circuitos a medida con recorridos y pruebas a tu gusto
+                            Utiliza la herramienta de creación de esxperiencias para crear circuitos a medida con recorridos y pruebas personalizadas de forma facil y rápida
                         </p>
                         <p class="text-light font-weight-bold">
-                            Resuelve enigmas y acertijos junto con tu y sed los primeros
+                            Comparte tus creaciónes con la comunidad
                         </p>
                         <p class="text-light font-weight-bold">
-                            Descubre la ciudad como nunca antes
+
                         </p>
 
                     </div>
@@ -131,25 +127,37 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid formulario">
-        <h1 class="display-4 mx-auto text-center" id="tituloPrincipal">Comienza ahora mismo, ¡¡contactanos!!</h1>
-        <form class="col-lg-6 mx-auto">
+    <div class="container-fluid formulario minAlto mb-4">
+        <h1 class="display-4 mx-auto text-center" id="tituloPrincipal">Comienza ahora mismo, ¡¡contáctanos!!</h1>
+        <form class="col-lg-6 mx-auto" method="post" action="{{route('suggestion.store')}}">
+            @csrf
             <div class="form-group">
-                <label for="exampleInputEmail1">Nombre</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ej: Carlos">
+                <label>Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Ej: Carlos" value="{{old('name')}}">
+                @if($errors->has('name'))
+                <span class="font-weight-bold text-danger">{{$errors->first('name')}}</span>
+                @endif
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Apellido:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ej: Navarro">
+                <label>Apellido:</label>
+                <input type="text" class="form-control" id="surname" name="surname" placeholder="Ej: Navarro" value="{{old('surname')}}">
+                @if($errors->has('surname'))
+                <span class="font-weight-bold text-danger">{{$errors->first('surname')}}</span>
+                @endif
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Correo electrónico:</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserta una dirección de correo electrónico">
-                <small id="emailHelp" class="form-text text-muted">Townout vela por tu privacidad, tu correo no será compartido</small>
+                <label>Correo electrónico:</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Inserta una dirección de correo electrónico" value="{{old('email')}}">
+                @if($errors->has('email'))
+                <span class="font-weight-bold text-danger">{{$errors->first('email')}}</span>
+                @endif
             </div>
             <div class="form-group form-check">
-                <label class="form-check-label" for="exampleCheck1">Mensaje:</label>
-                <textarea></textarea>
+                <label class="form-check-label">Mensaje:</label>
+                <textarea id="message" name="message"></textarea>
+                @if($errors->has('message'))
+                <span class="font-weight-bold text-danger">{{$errors->first('message')}}</span>
+                @endif
 
             </div>
             <button type="submit" class="btn btn-primary center">Enviar</button>
@@ -158,12 +166,14 @@
     </div>
 
     <footer class="bg-darkblue">
-
-        <img src="{{asset('assets/img/facebook.png')}}">
-        <img src="{{asset('assets/img/twitter.png')}}">
-        <img src="{{asset('assets/img/insta.png')}}">
-
-
+        <div class="container-fluid">
+            <div class="row">
+                <h4 class="col-6 text-light font-weight-bold py-4 pl-4">Xabier Artola Zableta @2019</h4>
+                <a class="col-2 text-center py-4" href="https://www.facebook.com/"><img class="py-auto img-fluid" src="{{asset('assets/img/facebook.svg')}}"></a>
+                <a class="col-2 text-center py-4" href="https://twitter.com/"><img class="img-fluid" src="{{asset('assets/img/twitter.svg')}}"></a>
+                <a class="col-2 text-center py-4" href="https://www.instagram.com/?hl=es"><img class="img-fluid" src="{{asset('assets/img/instagram.svg')}}"></a>
+            </div>
+        </div>
     </footer>
 </body>
 

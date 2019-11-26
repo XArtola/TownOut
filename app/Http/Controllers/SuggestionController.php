@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Suggestion;
+use App\Http\Requests\SuggestionRequest;
 
 class SuggestionController extends Controller
 {
@@ -36,12 +38,12 @@ class SuggestionController extends Controller
     {
         $suggestion = new Suggestion;
         $suggestion->name = $request->input('name');
-        $suggestion->name = $request->input('surname');
-        $suggestion->name = $request->input('email');
-        $suggestion->name = $request->input('message');
+        $suggestion->surname = $request->input('surname');
+        $suggestion->email = $request->input('email');
+        $suggestion->message = $request->input('message');
         $suggestion->save();
 
-        return view('index');
+        return redirect('/');
     }
 
     /**
